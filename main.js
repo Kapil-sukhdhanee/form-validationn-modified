@@ -20,7 +20,7 @@ function nameValidation(){
     console.log(typeof(fstName))
     let inv = ['!','@','#','$','^','&','*','(',')','_','-','=','+','{','}','[',']',"'",';',':',',','<','/','?','1','2','3','4','5','6','7','7','9','0']
     let invalidChar = true;
-    fstName.split(' ').length==3 ? (myVerification = true) : (myVerification = false,  giveError("name","Invalid  Name"))
+    
     for (let i =0;i<inv.length;i++){
         if ((fstName.includes(inv[i]))){
             invalidChar = true;
@@ -30,7 +30,7 @@ function nameValidation(){
             invalidChar = false;
         }
     }
-    if (fstName.length<3 || invalidChar==true ||fstName[0]==" " || fstName.endsWith(' ')|| fstName.includes("  ")){
+    if (fstName.length<3 || invalidChar==true ||fstName[0]==" " || fstName.endsWith(' ')|| fstName.includes("  ")||fstName.split(' ').length==3){
         giveError("name","Invalid  Name");
         myVerification = false;
     }
