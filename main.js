@@ -20,7 +20,7 @@ function nameValidation(){
     console.log(typeof(fstName))
     let inv = ['!','@','#','$','^','&','*','(',')','_','-','=','+','{','}','[',']',"'",';',':',',','<','/','?','1','2','3','4','5','6','7','7','9','0']
     let invalidChar = true;
-
+    fstName.split(' ').length==3 ? (myVerification = true) : (myVerification = false,  giveError("name","Invalid  Name"))
     for (let i =0;i<inv.length;i++){
         if ((fstName.includes(inv[i]))){
             invalidChar = true;
@@ -35,7 +35,7 @@ function nameValidation(){
         myVerification = false;
     }
     
-    fstName.split(' ').length==3 ? (myVerification = true) : (myVerification = false,  giveError("name","Invalid  Name"))
+    
 
     return myVerification;    
 }
@@ -124,19 +124,19 @@ function operatorValidation(){
     // to set operators logo
     if ((inputField.slice(1,4)>620)&(inputField.slice(1,4)<800)){
        let img = document.getElementById("logo");
-       img.setAttribute("src",("logo/jio.webp"))
+       img.setAttribute("src",("jio.webp"))
        let warning = document.getElementById("warning");
         warning.innerText = "";
     }
     else if ((inputField.slice(1,4)>800)&(inputField.slice(1,4)<921)){
         let img = document.getElementById("logo");
-        img.setAttribute("src",("logo/idea.jpg"));
+        img.setAttribute("src",("idea.jpg"));
         let warning = document.getElementById("warning");
         warning.innerText = "";
     }
     else if((inputField.slice(1,4)>920)&(inputField.slice(1,4)<1000)){
         let img = document.getElementById("logo");
-        img.setAttribute("src",("logo/vodafone.png"));
+        img.setAttribute("src",("vodafone.png"));
         let warning = document.getElementById("warning");
         warning.innerText = "";
     }
