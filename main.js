@@ -30,7 +30,7 @@ function nameValidation(){
             invalidChar = false;
         }
     }
-    if (fstName.length<3 || invalidChar==true ||fstName[0]==" " || fstName.endsWith(' ')|| fstName.includes("  ")||fstName.split(' ').length==3){
+    if (fstName.length<3 || invalidChar==true ||fstName[0]==" " || fstName.endsWith(' ')|| fstName.includes("  ")||fstName.split(' ').length<2){
         giveError("name","Invalid  Name");
         myVerification = false;
     }
